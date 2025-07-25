@@ -46,7 +46,7 @@
     </section>
     <section class="intro">
       <div class="card">
-        <h1>Que es el juego?</h1>
+        <h1>¿Que es el juego?</h1>
         <ul>
           <li>🎮 Jugadores: 2 a 5</li>
           <li>⏱ Duración: 15-30 min</li>
@@ -567,14 +567,14 @@
           <div class="glide">
             <div class="glide__track" data-glide-el="track">
               <ul class="glide__slides">
-                <li class="glide__slide"><img src="imgs/8.jpg" /></li>
-                <li class="glide__slide"><img src="imgs/CD.jpg" /></li>
-                <li class="glide__slide"><img src="imgs/DATE.jpg" /></li>
-                <li class="glide__slide"><img src="imgs/LS.jpg" /></li>
-                <li class="glide__slide"><img src="imgs/MKDIR.jpg" /></li>
-                <li class="glide__slide"><img src="imgs/RM.jpg" /></li>
-                <li class="glide__slide"><img src="imgs/TOUCH.jpg" /></li>
-                <li class="glide__slide"><img src="imgs/WHOAMI.jpg" /></li>
+                <li class="glide__slide"><img src="/imgs/8.jpg" /></li>
+                <li class="glide__slide"><img src="/imgs/CD.jpg" /></li>
+                <li class="glide__slide"><img src="/imgs/DATE.jpg" /></li>
+                <li class="glide__slide"><img src="/imgs/LS.jpg" /></li>
+                <li class="glide__slide"><img src="/imgs/MKDIR.jpg" /></li>
+                <li class="glide__slide"><img src="/imgs/RM.jpg" /></li>
+                <li class="glide__slide"><img src="/imgs/TOUCH.jpg" /></li>
+                <li class="glide__slide"><img src="/imgs/WHOAMI.jpg" /></li>
               </ul>
             </div>
 
@@ -649,6 +649,22 @@
 
       navToggle.addEventListener("click", () => {
         navMenu.classList.toggle("show");
+        document.body.classList.toggle("no-scroll");
+
+        const icon = navToggle.querySelector("i");
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-xmark");
+      });
+
+      document.querySelectorAll("#navMenu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("show");
+          document.body.classList.remove("no-scroll");
+
+          const icon = navToggle.querySelector("i");
+          icon.classList.add("fa-bars");
+          icon.classList.remove("fa-xmark");
+        });
       });
     </script>
     <script>
