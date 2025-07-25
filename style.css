@@ -133,7 +133,7 @@ a {
 
 .card li {
   margin: 1rem;
-  font-family: "Noto Color Emoji", sans-serif;
+  font-family: "Noto Color Emoji", system-ui;
 }
 
 .card h1 {
